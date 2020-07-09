@@ -50,5 +50,3 @@
 ?>
 ---- THE HTML PAGE CONTENT ----
 ```
-<img src="img/ddos_.PNG">
-# Anti-ddos
