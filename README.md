@@ -50,3 +50,5 @@
 ?>
 ---- THE HTML PAGE CONTENT ----
 ```
+### Скачивание (ZIP):
+[ZIP](https://github.com/lkapitman/Anti-ddos/archive/master.zip "Download")
