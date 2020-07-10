@@ -1,5 +1,5 @@
 <img src="img/icone.png" >
-<h1>Kapitman-AntiDDOS-system</h1>
+<h1>AntiDDOS-system</h1>
 Простой способ защитить ваше веб-приложение от DDOS-атаки (СВОБОДНО) в * 1 строке *.
 
 ## Как это работает?
