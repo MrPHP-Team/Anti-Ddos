@@ -2,6 +2,9 @@
 <h1>AntiDDOS-system</h1>
 Простой способ защитить ваше веб-приложение от DDOS-атаки (СВОБОДНО) в * 1 строке *.
 
+## Лицензия:
+[LICENSE](https://github.com/lkapitman/Anti-ddos/blob/master/LICENSE "LICENSE")
+
 ## Как это работает?
 <img src="img/icon.png" >
 
