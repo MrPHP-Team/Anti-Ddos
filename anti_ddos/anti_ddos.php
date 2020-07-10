@@ -1,9 +1,5 @@
 
 <?php
-/*
-* Anti DDOS PHP Script
-* By S@n1X D4rk3r
-*/
 
 function getFromfile_source($type){
 
@@ -35,7 +31,7 @@ $ad_ip = "";
 // } elseif(getenv("HTTP_X_FORWARDED_FOR") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_X_FORWARDED_FOR "))) {
 // 	$ad_ip = getenv("HTTP_X_FORWARDED_FOR");
 // }else { $ad_ip = getenv("REMOTE_ADDR"); }
- 
+
 $ad_ip = (getenv("HTTP_CLIENT_IP") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_CLIENT_IP "))) ? getenv("HTTP_CLIENT_IP") : ( (getenv("HTTP_X_FORWARDED_FOR") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_X_FORWARDED_FOR "))) ? getenv("HTTP_X_FORWARDED_FOR") : getenv("REMOTE_ADDR"));
 
 $ad_source = getFromfile_source('black');
@@ -50,9 +46,9 @@ if(!in_array($ad_ip, $ad_source)) {
 		$ad_file = fopen("{$ad_dir}/{$ad_temp_file}", "a+");
 		$ad_string = $ad_ip.',';
 		fputs($ad_file, "$ad_string");
-		fclose($ad_file); 
+		fclose($ad_file);
 		$array_for_nom = array('maN','bZ','E','S','i','P','u','1','4','Ds','Er','FtGy','A','d','98','z1sW');
-		$nom_form = $array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)]; 
+		$nom_form = $array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)];
 		$_SESSION['variable_du_form'] = str_shuffle($nom_form).$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)];
 
 		include('Verify_your_identity.php');
@@ -71,14 +67,14 @@ if(!in_array($ad_ip, $ad_source)) {
 		}else{
 			$_SESSION['nbre_essai']--;
 			$array_for_nom = array('maN','bZ','E','S','i','P','u','1','4','Ds','Er','FtGy','A','d','98','z1sW');
-			$nom_form = $array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)]; 
-			$_SESSION['variable_du_form'] = str_shuffle($nom_form).$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)]; 
+			$nom_form = $array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)];
+			$_SESSION['variable_du_form'] = str_shuffle($nom_form).$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)];
 
 			include('Verify_your_identity_LASTCHANCE.php');
 
 			die();
 		}
-		
+
 	}else {
 		$ad_file = fopen("{$ad_dir}/{$ad_black_file}", "a+");
 		$ad_string = $ad_ip.',';

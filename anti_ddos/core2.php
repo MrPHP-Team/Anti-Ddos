@@ -1,5 +1,5 @@
 <?php
-  $cookie = "AntiDDosBySanixDarker";
+  $cookie = "AntiDDosByLkapitman";
   $othercookie = 'AnotherAntiDDos';
   if($cookie && $othercookie > 0) $iptime = 20;
   else $iptime = 10;

@@ -1,9 +1,4 @@
 <?php
-
-/**
- * FILE: securitecode.php
- * This code generate a random code / capcha to verify if it's a human on board or not
- */
 if(!isset($_SESSION)){
   session_start();
 }

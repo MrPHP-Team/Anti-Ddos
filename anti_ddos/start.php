@@ -1,14 +1,8 @@
 <?php 
-/**
- * AntiDDOS System
- * FILE: index.php
- * By Sanix Darker
- */
-
-if(!isset($_SESSION)){
+if(!isset($_SESSION)) {
 	session_start();
 }
-if(isset($_SESSION['standby'])){
+if(isset($_SESSION['standby'])) {
 
 	// There is all your configuration
 
@@ -30,7 +24,7 @@ if(isset($_SESSION['standby'])){
 		
 
 	$config_status = "";
-	function Create_File($the_path){
+	function Create_File($the_path) {
 
 		$handle = fopen($the_path, 'w') or die('Cannot open file:  '.$the_path);
 		return "Creating ".$the_path." .... done";
@@ -38,14 +32,14 @@ if(isset($_SESSION['standby'])){
 
 
 	// Checking if all files exist before launching the cheking
-	$config_status .= (!file_exists("{$ad_dir}/{$ad_check_file}")) ? Create_File("{$ad_dir}/{$ad_check_file}") : "ERROR: Creating "."{$ad_dir}/{$ad_check_file}<br>";
-	$config_status .= (!file_exists("{$ad_dir}/{$ad_temp_file}")) ? Create_File("{$ad_dir}/{$ad_temp_file}") : "ERROR: Creating "."{$ad_dir}/{$ad_temp_file}<br>";
-	$config_status .= (!file_exists("{$ad_dir}/{$ad_black_file}")) ? Create_File("{$ad_dir}/{$ad_black_file}") : "ERROR: Creating "."{$ad_dir}/{$ad_black_file}<br>";
-	$config_status .= (!file_exists("{$ad_dir}/{$ad_white_file}")) ? Create_File("{$ad_dir}/{$ad_white_file}") : "ERROR: Creating "."{$ad_dir}/{$ad_white_file}<br>";
-	$config_status .= (!file_exists("{$ad_dir}/{$ad_all_file}")) ? Create_File("{$ad_dir}/{$ad_all_file}") : "ERROR: Creating "."{$ad_dir}/{$ad_all_file}<br>";
+	$config_status .= (!file_exists("{$ad_dir}/{$ad_check_file}")) ? Create_File("{$ad_dir}/{$ad_check_file}") : "Ошибка: Creating "."{$ad_dir}/{$ad_check_file}<br>";
+	$config_status .= (!file_exists("{$ad_dir}/{$ad_temp_file}")) ? Create_File("{$ad_dir}/{$ad_temp_file}") : "Ошибка: Creating "."{$ad_dir}/{$ad_temp_file}<br>";
+	$config_status .= (!file_exists("{$ad_dir}/{$ad_black_file}")) ? Create_File("{$ad_dir}/{$ad_black_file}") : "Ошибка: Creating "."{$ad_dir}/{$ad_black_file}<br>";
+	$config_status .= (!file_exists("{$ad_dir}/{$ad_white_file}")) ? Create_File("{$ad_dir}/{$ad_white_file}") : "Ошибка: Creating "."{$ad_dir}/{$ad_white_file}<br>";
+	$config_status .= (!file_exists("{$ad_dir}/{$ad_all_file}")) ? Create_File("{$ad_dir}/{$ad_all_file}") : "Ошибка: Creating "."{$ad_dir}/{$ad_all_file}<br>";
 
 	if(!file_exists ("{$ad_dir}/../anti_ddos.php")){
-		$config_status .= "anti_ddos.php does'nt exist!";
+		$config_status .= "anti_ddos.php не найден!";
 	}
 
 	if (!file_exists("{$ad_dir}/{$ad_check_file}") or 
@@ -55,7 +49,7 @@ if(isset($_SESSION['standby'])){
 						!file_exists("{$ad_dir}/{$ad_all_file}") or 
 							!file_exists ("{$ad_dir}/../anti_ddos.php")) {
 
-								$config_status .= "Some files does'nt exist!";
+								$config_status .= "Некоторые файлы не найдены!";
 								die($config_status);
 	}
 
@@ -92,7 +86,7 @@ if(isset($_SESSION['standby'])){
 		<div class="loading__dots__dot"></div>
 		<div class="loading__dots__dot"></div>
 		</div>
-		<div class="loading__msg"><center><b style="font-size: 22px;"><a href="https://github.com/Sanix-Darker/AntiDDOS-system" target="_blank" style="color: black;">ANTIDDOS</a> is checking....</b><br><br>Hi, don't worry, this is a simple security verfication, you will see this only one time;<br> your webpage will show up soon!<br> This security wall was build by <a href="https://github.com/sanix-darker" target="_blank">Sanix darker</a> </center></div>
+		<div class="loading__msg"><center><b style="font-size: 22px;"><a href="#" target="_blank" style="color: black;">ANTIDDOS</a> проверяет .... </b><br><br>Привет, не волнуйтесь, это простая проверка безопасности, вы увидите это только один раз;<br> Ваша веб-страница скоро появится!<br> Эта защита сделана: <a href="https://github.com/sanix-darker" target="_blank">lkapitman</a> </center></div>
 	</div>
 
 <?php exit();
